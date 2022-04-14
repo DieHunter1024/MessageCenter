@@ -1,8 +1,10 @@
 # MessageCenter
 
 #### 介绍
-基于https://www.npmjs.com/package/message-center.js结合自己的发布订阅模式实现的一个消息中心
-
+基于
+https://gitee.com/DieHunter/myCode/tree/master/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F&%E5%8F%91%E5%B8%83%E8%80%85%E8%AE%A2%E9%98%85%E8%80%85%E6%A8%A1%E5%BC%8F/PubSubPattern
+发布订阅模式实现的一个消息中心
+参考：https://www.npmjs.com/package/message-center.js
 #### 软件架构
 软件架构说明
 

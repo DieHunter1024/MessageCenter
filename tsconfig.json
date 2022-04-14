@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": false,
+        "declaration": true,
+        "target": "esnext",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "jsx": "react",
+        "esModuleInterop": true,
+        "noEmitOnError": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noResolve": true,
+        "removeComments": true,
+        "strictNullChecks": false,
+        "inlineSourceMap": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "outDir": "dist/lib",
+        "rootDir": "src",
+        "skipLibCheck": true,
+        "lib": []
+    }
+}
