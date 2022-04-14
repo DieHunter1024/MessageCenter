@@ -1,7 +1,7 @@
 /*
  * @Author: Hunter
  * @Date: 2022-04-14 15:32:29
- * @LastEditTime: 2022-04-14 19:05:22
+ * @LastEditTime: 2022-04-14 19:25:46
  * @LastEditors: Hunter
  * @Description: 
  * @FilePath: \message-center\src\index.ts
@@ -81,7 +81,7 @@ export class MessageCenter implements IMessageCenter {
         !handler && (this.events[type] = [])
         handler && this.checkHandler(type, handler)
         for (let i = 0; i < this.events[type].length; i++) {
-            if (this.events[type][i] && this.events[type][i] === fn) {
+            if (this.events[type][i] && this.events[type][i] === handler) {
                 this.events[type][i] = null
             }
         }
