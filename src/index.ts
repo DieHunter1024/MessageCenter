@@ -1,16 +1,16 @@
 /*
  * @Author: Hunter
  * @Date: 2022-04-14 15:32:29
- * @LastEditTime: 2022-04-14 19:25:46
+ * @LastEditTime: 2022-04-14 19:50:29
  * @LastEditors: Hunter
  * @Description: 
  * @FilePath: \message-center\src\index.ts
  * 可以输入预定的版权声明、个性签名、空行等
  */
-import { IMessageCenter } from "./type"
+import { IMessageCenter, Handlers } from "./type"
 
 export class MessageCenter implements IMessageCenter {
-    events = {} //调度中心列表
+    events: Handlers
     /**
      * 注册事件至调度中心
      * @param type 事件类型，特指具体事件名

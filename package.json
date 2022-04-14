@@ -5,7 +5,9 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "pnpm run tsc:build",
+    "build:babel:mjs": "pnpm run tsc:build && pnpm run babel:mjs",
     "publish": "",
+    "babel:mjs": "babel dist --out-dir dist",
     "tsc:build": "rm -fr dist && tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +20,8 @@
     "PubSubPattern"
   ],
   "author": "DieHunter",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }

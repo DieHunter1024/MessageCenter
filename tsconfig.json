@@ -3,10 +3,9 @@
         "allowSyntheticDefaultImports": true,
         "sourceMap": false,
         "declaration": true,
-        "target": "esnext",
+        "target": "ES5",
         "module": "commonjs",
         "moduleResolution": "node",
-        "jsx": "react",
         "esModuleInterop": true,
         "noEmitOnError": true,
         "noFallthroughCasesInSwitch": true,
@@ -22,21 +21,11 @@
         "rootDir": "src",
         "skipLibCheck": true,
         "lib": [
-            "dom",
-            "es5",
-            "es6",
-            "es7",
-            "es2015.promise",
-            "es2018.promise",
-            "es2015.collection",
-            "es2015.core",
-            "es2015",
-            "es2016",
-            "es2016.array.include",
-            "es2017",
-            "es2017.object",
-            "es2018",
-            "es2015.iterable"
+            "ES5",
+            "ES6",
+            "ES2015.promise",
+            "ES2018.promise",
+            "ES2015.iterable"
         ]
     }
 }
