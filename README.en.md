@@ -11,15 +11,13 @@ Software architecture description
 
 #### Installation
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  pnpm i
+2.  pnpm build
 
 #### Instructions
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  pnpm build:babel:mjs
+2.  pnpm example
 
 #### Contribution
 

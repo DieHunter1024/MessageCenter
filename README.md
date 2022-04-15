@@ -11,15 +11,13 @@ https://gitee.com/DieHunter/myCode/tree/master/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  pnpm i
+2.  pnpm build
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  pnpm build:babel:mjs
+2.  pnpm example
 
 #### 参与贡献
 
