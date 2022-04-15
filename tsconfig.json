@@ -21,6 +21,7 @@
         "rootDir": "src",
         "skipLibCheck": true,
         "lib": [
+            "DOM",
             "ES5",
             "ES6",
             "ES2015.promise",
