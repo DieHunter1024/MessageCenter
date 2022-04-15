@@ -1,7 +1,7 @@
 /*
  * @Author: Hunter
  * @Date: 2022-04-14 15:32:29
- * @LastEditTime: 2022-04-15 14:57:40
+ * @LastEditTime: 2022-04-15 15:32:49
  * @LastEditors: Hunter
  * @Description: 
  * @FilePath: \message-center\src\index.ts
@@ -42,8 +42,8 @@ export class MessageCenter implements IMessageCenter {
     once(type, handler) {
         this.checkHandler(type, handler)
         const fn = (...args) => {
-            this.un(type, handler);
-            handler(args)
+            this.un(type, fn);
+            return handler(args)
         }
         this.on(type, fn)
         return this
