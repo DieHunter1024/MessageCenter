@@ -1,7 +1,7 @@
 /*
  * @Author: Hunter
  * @Date: 2022-04-14 15:32:29
- * @LastEditTime: 2022-04-14 19:50:29
+ * @LastEditTime: 2022-04-15 14:57:40
  * @LastEditors: Hunter
  * @Description: 
  * @FilePath: \message-center\src\index.ts
@@ -10,7 +10,7 @@
 import { IMessageCenter, Handlers } from "./type"
 
 export class MessageCenter implements IMessageCenter {
-    events: Handlers
+    events: Handlers = {}
     /**
      * 注册事件至调度中心
      * @param type 事件类型，特指具体事件名
