@@ -1,7 +1,7 @@
 /*
  * @Author: Hunter
  * @Date: 2022-04-14 15:32:29
- * @LastEditTime: 2022-04-15 17:05:07
+ * @LastEditTime: 2022-04-18 17:07:19
  * @LastEditors: Hunter
  * @Description: 
  * @FilePath: \message-center\src\index.ts
@@ -35,10 +35,12 @@ export class MessageCenter implements IMessageCenter {
         }
         return this
     }
-    un(type, handler) { //销毁监听
+    //销毁监听
+    un(type, handler) {
         this.unHandler(type, handler)
         return this
     }
+    // 只注册一次监听，执行即销毁
     once(type, handler) {
         this.checkHandler(type, handler)
         const fn = (...args) => {
@@ -48,16 +50,20 @@ export class MessageCenter implements IMessageCenter {
         this.on(type, fn)
         return this
     }
+    // 重置调度中心
     clear() {
         this.events = {}
         return this
     }
+    // 判断事件是否被订阅
     has(type: string) {
         return !!this.events[type]
     }
+    // 同一个事件被绑定了多少函数
     handlerLength(type: string) {
         return this.events[type]?.length ?? 0
     }
+    // 监听invoke的消息，若handler中进行了计算或者异步操作，会反馈给invoke
     watch(type, handler) {
         this.checkHandler(type, handler)
         const fn = (...args) => {
@@ -66,17 +72,20 @@ export class MessageCenter implements IMessageCenter {
         this.on(type, fn);
         return this
     }
+    // 触发watch事件，并且接收watch处理结果
     invoke(type, data) {
         return new Promise<void>((resolve) => {
             this.once(this.prefixStr(type), resolve);
             this.emit(type, data);
         })
     }
+    // 批量执行调度中心中某个函数集
     private runHandler(type, data) {
         for (let i = 0; i < this.events[type].length; i++) {
             this.events[type][i] && this.events[type][i](data)
         }
     }
+    // 批量销毁调度中心中某个函数集
     private unHandler(type, handler) {
         !handler && (this.events[type] = [])
         handler && this.checkHandler(type, handler)
