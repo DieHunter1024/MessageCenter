@@ -1,13 +1,15 @@
 # MessageCenter
 
 #### 介绍
+
 基于
 https://gitee.com/DieHunter/myCode/tree/master/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F&%E5%8F%91%E5%B8%83%E8%80%85%E8%AE%A2%E9%98%85%E8%80%85%E6%A8%A1%E5%BC%8F/PubSubPattern
 发布订阅模式实现的一个消息中心
 参考：https://www.npmjs.com/package/message-center.js
-#### 软件架构
-软件架构说明
 
+#### 软件架构
+
+软件架构说明
 
 #### 安装教程
 
@@ -16,22 +18,48 @@ https://gitee.com/DieHunter/myCode/tree/master/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8
 
 #### 使用说明
 
-1.  pnpm build:babel:mjs
-2.  pnpm example
+1.  pnpm build（构建）
+2.  pnpm example（示例）
 
-#### 参与贡献
+    # 注册事件至调度中心
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+    ## messageCenter.on("a", funcA);
 
+    # 触发调度中心的某个或者某些该事件类型下注册的函数
 
-#### 特技
+    ## messageCenter.emit("a", { state: "stop" });
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+    # 销毁监听
+
+    ## messageCenter.un("a", funcA);
+
+    ## messageCenter.un("a");
+
+    # 只注册一次监听，执行即销毁
+
+    ## messageCenter.once("a", funcA);
+
+    # 重置调度中心
+
+    ## messageCenter.clear();
+
+    # 判断事件是否被订阅
+
+    ## messageCenter.has("a");
+
+    # 同一个事件被绑定了多少函数
+
+    ## messageCenter.handlerLength("a");
+
+    # 监听 invoke 的消息，若 handler 中进行了计算或者异步操作，会反馈给 invoke
+
+    ## messageCenter.watch("b", funcB);
+
+    # 触发 watch 事件，并且接收 watch 处理结果
+
+    ## messageCenter.invoke("b", { num1: 1, num2: 2 }).then((result) => {
+
+    ## console.log(result);
+
+    ## });
+
