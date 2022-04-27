@@ -15,44 +15,44 @@
 2.  pnpm example（示例）
 3.  example 文件夹下是使用 demo
 
-    # 注册事件至调度中心
+#### 注册事件至调度中心
 
-    messageCenter.on("a", funcA);
+messageCenter.on("a", funcA);
 
-    # 触发调度中心的某个或者某些该事件类型下注册的函数
+#### 触发调度中心的某个或者某些该事件类型下注册的函数
 
-    messageCenter.emit("a", { state: "stop" });
+messageCenter.emit("a", { state: "stop" });
 
-    # 销毁监听
+#### 销毁监听
 
-    messageCenter.un("a", funcA);
+messageCenter.un("a", funcA);
 
-    messageCenter.un("a");
+messageCenter.un("a");
 
-    # 只注册一次监听，执行即销毁
+#### 只注册一次监听，执行即销毁
 
-    messageCenter.once("a", funcA);
+messageCenter.once("a", funcA);
 
-    # 重置调度中心
+#### 重置调度中心
 
-    messageCenter.clear();
+messageCenter.clear();
 
-    # 判断事件是否被订阅
+#### 判断事件是否被订阅
 
-    messageCenter.has("a");
+messageCenter.has("a");
 
-    # 同一个事件被绑定了多少函数
+#### 同一个事件被绑定了多少函数
 
-    messageCenter.handlerLength("a");
+messageCenter.handlerLength("a");
 
-    # 监听 invoke 的消息，若 handler 中进行了计算或者异步操作，会反馈给 invoke
+#### 监听 invoke 的消息，若 handler 中进行了计算或者异步操作，会反馈给 invoke
 
-    messageCenter.watch("b", funcB);
+messageCenter.watch("b", funcB);
 
-    # 触发 watch 事件，并且接收 watch 处理结果
+#### 触发 watch 事件，并且接收 watch 处理结果
 
-    messageCenter.invoke("b", { num1: 1, num2: 2 }).then((result) => {
+messageCenter.invoke("b", { num1: 1, num2: 2 }).then((result) => {
 
-    console.log(result);
+console.log(result);
 
-    });
+});
