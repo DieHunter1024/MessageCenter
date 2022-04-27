@@ -2,14 +2,7 @@
 
 #### 介绍
 
-基于
-https://gitee.com/DieHunter/myCode/tree/master/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F&%E5%8F%91%E5%B8%83%E8%80%85%E8%AE%A2%E9%98%85%E8%80%85%E6%A8%A1%E5%BC%8F/PubSubPattern
-发布订阅模式实现的一个消息中心
-参考：https://www.npmjs.com/package/message-center.js
-
-#### 软件架构
-
-软件架构说明
+基于发布订阅模式实现的一个事件消息中心
 
 #### 安装教程
 
@@ -20,6 +13,7 @@ https://gitee.com/DieHunter/myCode/tree/master/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8
 
 1.  pnpm build（构建）
 2.  pnpm example（示例）
+3.  example 文件夹下是使用 demo
 
     # 注册事件至调度中心
 
@@ -62,4 +56,3 @@ https://gitee.com/DieHunter/myCode/tree/master/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8
     ## console.log(result);
 
     ## });
-
