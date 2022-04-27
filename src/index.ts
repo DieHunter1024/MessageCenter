@@ -1,7 +1,7 @@
 /*
  * @Author: Hunter
  * @Date: 2022-04-14 15:32:29
- * @LastEditTime: 2022-04-18 17:07:19
+ * @LastEditTime: 2022-04-27 11:36:21
  * @LastEditors: Hunter
  * @Description: 
  * @FilePath: \message-center\src\index.ts
@@ -126,6 +126,7 @@ export class MessageCenter implements IMessageCenter {
 }
 // module.exports = MessageCenter
 // exports.MessageCenter = MessageCenter
+
 export const messageCenter = MessageCenter.Instance(MessageCenter)
 
 export default MessageCenter;
