@@ -3,6 +3,9 @@
 #### 介绍
 
 基于发布订阅模式实现的一个事件消息中心
+#### 博客
+
+https://hunter1024.blog.csdn.net/article/details/124452792
 
 #### 安装教程
 

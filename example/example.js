@@ -1,13 +1,22 @@
 /*
  * @Author: Hunter
  * @Date: 2022-04-27 11:10:07
- * @LastEditTime: 2022-04-27 11:52:45
+ * @LastEditTime: 2022-04-27 21:26:45
  * @LastEditors: Hunter
  * @Description:
  * @FilePath: \message-center\example\example.js
  * 可以输入预定的版权声明、个性签名、空行等
  */
-
+const funcC = async (args) => {
+  await syncFn();
+  return args.reduce((pre, next) => (pre += next));
+};
+// 异步函数
+const syncFn = () => {
+  return new Promise((res) => {
+    setTimeout(res, 1000);
+  });
+};
 class Example {
   constructor(messageCenter) {
     // on
@@ -26,10 +35,10 @@ class Example {
     // handlerLength
     messageCenter.handlerLength("a");
     // watch
-    messageCenter.watch("b", funcB);
+    messageCenter.watch("c", funcC);
 
     // invoke
-    messageCenter.invoke("b", { num1: 1, num2: 2 }).then((result) => {
+    messageCenter.invoke("c", [1, 2, 3, 4]).then((result) => {
       console.log(result);
     });
   }

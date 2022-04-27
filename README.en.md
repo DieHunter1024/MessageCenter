@@ -1,6 +1,9 @@
 # EventMessageCenter
 #### Introduction
 An event message center based on publish subscribe mode
+#### blog
+
+https://hunter1024.blog.csdn.net/article/details/124452792
 #### Installation tutorial
 1. pnpm i
 2. pnpm build
