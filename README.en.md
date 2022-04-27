@@ -1,37 +1,31 @@
-# MessageCenter
-
-#### Description
-基于
-https://gitee.com/DieHunter/myCode/tree/master/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F&%E5%8F%91%E5%B8%83%E8%80%85%E8%AE%A2%E9%98%85%E8%80%85%E6%A8%A1%E5%BC%8F/PubSubPattern
-发布订阅模式实现的一个消息中心
-参考：https://www.npmjs.com/package/message-center.js
-
-#### Software Architecture
-Software architecture description
-
-#### Installation
-
-1.  pnpm i
-2.  pnpm build
-
-#### Instructions
-
-1.  pnpm build:babel:mjs
-2.  pnpm example
-
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+# EventMessageCenter
+#### Introduction
+An event message center based on publish subscribe mode
+#### Installation tutorial
+1. pnpm i
+2. pnpm build
+#### Instructions for use
+1. Pnpm build
+2. Pnpm example
+3. Demo is used under the example folder
+# Register the event to the dispatching center
+messageCenter.on("a", funcA);
+# Trigger one or some functions registered under this event type in the dispatching center
+messageCenter.emit("a", { state: "stop" });
+# Destroy listening
+messageCenter.un("a", funcA);
+messageCenter.un("a");
+# Only register once to listen and destroy upon execution
+messageCenter.once("a", funcA);
+# Reset dispatch center
+messageCenter.clear();
+# Judge whether the event is subscribed
+messageCenter.has("a");
+# How many functions are bound to the same event
+messageCenter.handlerLength("a");
+# Listen to the message of invoke.If there is calculation or asynchronous operation in the handler, it will be fed back to invoke
+messageCenter.watch("b", funcB);
+# Trigger the watch event and receive the watch processing result
+messageCenter.invoke("b", { num1: 1, num2: 2 }).then((result) => {
+console.log(result);
+});
