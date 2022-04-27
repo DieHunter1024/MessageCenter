@@ -17,7 +17,7 @@
         "inlineSourceMap": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "outDir": "dist",
+        "outDir": "dist/common",
         "rootDir": "src",
         "skipLibCheck": true,
         "lib": [
