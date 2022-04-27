@@ -1,6 +1,6 @@
 {
   "name": "message-center-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个事件消息中心",
   "main": "dist/common/index.js",
   "types": "dist/common/index.d.ts",
