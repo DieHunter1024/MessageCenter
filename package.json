@@ -7,7 +7,7 @@
   "scripts": {
     "build": "pnpm run build:babel:js",
     "build:babel:js": "pnpm run tsc:build && pnpm run babel:mjs &&  pnpm run babel:cjs",
-    "publish": "pnpm run build && cp package.json README.md dist && pnpm publish dist",
+    "publish": "pnpm run build && pnpm publish",
     "babel:mjs": "babel dist/esm --out-dir dist/esm",
     "babel:cjs": "babel dist/common --out-dir dist/common",
     "tsc:build": "rm -fr dist && tsc -p tsconfig.json && tsc -p tsconfig.es.json",
