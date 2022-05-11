@@ -1,6 +1,6 @@
 {
   "name": "event-message-center",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "基于发布订阅模式实现的一个事件消息中心",
   "main": "./dist/common/index.js",
   "types": "./dist/common/index.d.ts",
@@ -16,6 +16,9 @@
     "example:hot": "pnpm build && nodemon example",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://gitee.com/DieHunter/message-center.git"
