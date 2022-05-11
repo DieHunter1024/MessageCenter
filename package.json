@@ -1,6 +1,6 @@
 {
   "name": "event-message-center",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "基于发布订阅模式实现的一个事件消息中心",
   "main": "./dist/common/index.js",
   "types": "./dist/common/index.d.ts",
@@ -8,7 +8,7 @@
   "scripts": {
     "build": "pnpm run build:babel:js",
     "build:babel:js": "pnpm run tsc:build && pnpm run babel:mjs &&  pnpm run babel:cjs",
-    "publish": "pnpm run build && pnpm publish",
+    "publish": "pnpm run build && pnpm publish dist",
     "babel:mjs": "babel dist/esm --out-dir dist/esm",
     "babel:cjs": "babel dist/common --out-dir dist/common",
     "tsc:build": "rm -fr dist && tsc -p tsconfig.json && tsc -p tsconfig.es.json",
