@@ -1,10 +1,14 @@
 {
   "name": "event-message-center",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "基于发布订阅模式实现的一个事件消息中心",
   "main": "./dist/common/index.js",
   "types": "./dist/common/index.d.ts",
   "module": "./dist/esm/index.js",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/common/index.js"
+  },
   "scripts": {
     "build": "pnpm run build:babel:js",
     "build:babel:js": "pnpm run tsc:build && pnpm run babel:mjs &&  pnpm run babel:cjs",
